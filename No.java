@@ -1,15 +1,17 @@
-package TrabalhoArvore;
+package src;
 
-public class No {
-	
-	Restaurante dados;
-    No esquerda;
-    No direita;
-    
-    // Construtor básico
-    public No(Restaurante dados) {
+class No {
+    int chave;
+    int dados;
+    No esquerda, direita, pai;
+    int altura;
+    int cor; // 0 = preto, 1 = vermelho
+
+    public No(int chave, int dados) {
+        this.chave = chave;
         this.dados = dados;
-        this.esquerda = null;
-        this.direita = null;
+        this.esquerda = this.direita = this.pai = null;
+        this.altura = 1;
+        this.cor = 1; // Novo nó sempre vermelho
     }
 }
