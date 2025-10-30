@@ -1,35 +1,31 @@
-package TrabalhoArvore;
+package src;
 
-public class Restaurante implements Comparable<Restaurante> {
-	
-	//(O Objeto de Dados)
-	//Esta classe representa os dados do seu dataset. O método compareTo é crucial para as árvores
-
-    // Chave: vamos usar o ID único como String
-    private String id;
-    // Dados para análise
-    private String nome;
-    private double nota;
+class Restaurante {
+    int idRestaurante;
+    String nomeRestaurante;
+    String cidade;
+    double avaliacaoMedia;
+    int totalAvaliacoes;
+    String tipoComida;
+    int tempoEntregaMedio;
+    double precoMedio;
     
-    public Restaurante(String id, String nome, double nota) {
-        this.id = id;
-        this.nome = nome;
-        this.nota = nota;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    // Método obrigatório para que a árvore saiba como ordenar
-    @Override
-    public int compareTo(Restaurante outro) {
-        // Compara os IDs como strings
-        return this.id.compareTo(outro.id);
+    public Restaurante(int idRestaurante, String nomeRestaurante, String cidade, 
+                     double avaliacaoMedia, int totalAvaliacoes, String tipoComida, 
+                     int tempoEntregaMedio, double precoMedio) {
+        this.idRestaurante = idRestaurante;
+        this.nomeRestaurante = nomeRestaurante;
+        this.cidade = cidade;
+        this.avaliacaoMedia = avaliacaoMedia;
+        this.totalAvaliacoes = totalAvaliacoes;
+        this.tipoComida = tipoComida;
+        this.tempoEntregaMedio = tempoEntregaMedio;
+        this.precoMedio = precoMedio;
     }
     
     @Override
     public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Nota: " + nota;
+        return String.format("Restaurante [ID: %d, Nome: %s, Cidade: %s, Avaliação: %.1f, Entrega: %d min]",
+                idRestaurante, nomeRestaurante, cidade, avaliacaoMedia, tempoEntregaMedio);
     }
 }
