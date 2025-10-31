@@ -4,7 +4,7 @@ import java.util.*;
 
 public class AnaliseArvores {
     public static void main(String[] args) {
-        System.out.println("=== ANÁLISE DE ÁRVORES COM DADOS iFood RESTAURANTS ===\n");
+        System.out.println("=== ANALISE DE ARVORES COM DADOS iFood RESTAURANTS ===\n");
         
         // Carregar dataset de restaurantes
         System.out.println("Carregando dataset de restaurantes iFood...");
@@ -26,9 +26,9 @@ public class AnaliseArvores {
     }
     
     private static void realizarAnaliseRestaurantes(List<Restaurante> restaurantes) {
-        System.out.println("\n=== ANÁLISE ESPECÍFICA - RESTAURANTES ===");
+        System.out.println("\n=== ANALISE ESPECIFICA - RESTAURANTES ===");
         
-        // Análise por tipo de comida
+        // Analise por tipo de comida
         Map<String, Integer> contagemTipoComida = new HashMap<>();
         Map<String, Double> avaliacaoMediaTipoComida = new HashMap<>();
         Map<String, Integer> tempoEntregaTipoComida = new HashMap<>();
