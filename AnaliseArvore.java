@@ -6,7 +6,8 @@ public class AnaliseArvores {
     public static void main(String[] args) {
         System.out.println("=== ANALISE DE ARVORES COM DADOS iFood RESTAURANTS ===\n");
         
-        // Carregar dataset de restaurantes
+        // Carregar os dados dos restaurantes
+        
         System.out.println("Carregando dataset de restaurantes iFood...");
         List<Restaurante> restaurantes = CarregadorDataset.carregarRestaurantes();
         System.out.println("Dataset carregado: " + restaurantes.size() + " restaurantes\n");
@@ -18,7 +19,7 @@ public class AnaliseArvores {
         }
         System.out.println();
         
-        // Executar testes comparativos
+        // Executa os testes comparativos das árvores
         TestadorArvores.testarArvores(restaurantes);
         
         // Análises específicas para restaurantes
